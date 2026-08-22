@@ -17,3 +17,82 @@ jobs:
       output_folder: "keymap-drawer"
       parse_args: ""
       draw_args: "charybdis:'-j config/info.json -l five_column_transform'"
+
+  update-readme:
+    needs: draw
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update README with keymap images
+        run: |
+          python3 << 'PYEOF'
+          import glob
+
+          START_MARKER = "<!-- keymap-drawer-images -->"
+          END_MARKER = "<!-- keymap-drawer-images-end -->"
+          readme_path = "README.md"
+
+          # Collect generated SVG files
+          svgs = sorted(glob.glob("keymap-drawer/*.svg"))
+          if not svgs:
+              print("No SVG files found. Skipping README update.")
+              exit(0)
+
+          # Build image markdown lines
+          image_lines = [f"![keymap]({svg})" for svg in svgs]
+          image_block = "\n".join(image_lines)
+
+          with open(readme_path, "r") as f:
+              content = f.read()
+
+          start = content.find(START_MARKER)
+          end = content.find(END_MARKER)
+
+          if start != -1 and end != -1:
+              # Replace content between markers
+              new_content = (
+                  content[:start + len(START_MARKER)]
+                  + "\n" + image_block + "\n"
+                  + content[end:]
+              )
+          else:
+              # Replace existing keymap image lines with marked section
+              lines = content.split("\n")
+              new_lines = []
+              for line in lines:
+                  if line.startswith("![keymap](keymap-drawer/"):
+                      continue
+                  new_lines.append(line)
+              content = "\n".join(new_lines)
+              # Insert marked section before first blank line after title
+              insert_pos = content.find("\n\n")
+              if insert_pos != -1:
+                  new_content = (
+                      content[:insert_pos + 1]
+                      + "\n" + START_MARKER + "\n" + image_block + "\n" + END_MARKER
+                      + content[insert_pos + 1:]
+                  )
+              else:
+                  new_content = content + "\n\n" + START_MARKER + "\n" + image_block + "\n" + END_MARKER
+
+          with open(readme_path, "w") as f:
+              f.write(new_content)
+
+          print(f"Updated README with {len(svgs)} keymap image(s).")
+          PYEOF
+
+      - name: Commit updated README
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "No changes to README.md. Skipping commit."
+          else
+            git commit -m "docs: update README keymap images"
+            git push
+          fi

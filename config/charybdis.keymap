@@ -36,9 +36,9 @@
             key-positions = <17 18>;
         };
 
-        scroll {
-            bindings = <&mo 1>;
-            key-positions = <20 21>;
+        enter {
+            bindings = <&kp enter>;
+            key-positions = <16 17 18 19>;
         };
     };
 
@@ -58,11 +58,11 @@
         compatible = "zmk,keymap";
 
         QWERT {
-            bindings = <
+            bindings =  <
   &kp Q           &kp P           &kp Y             &kp C               &kp B        &kp V          &kp M                &kp U              &kp Z            &kp L
   &mt LEFT_WIN A  &mt LEFT_ALT N  &mt LEFT_SHIFT I  &mt LEFT_CONTROL S  &kp F        &kp D          &mt RIGHT_CONTROL T  &mt RIGHT_SHIFT H  &mt RIGHT_ALT O  &mt RIGHT_WIN R
-  &lt 1 COMMA     &kp PERIOD      &kp J             &kp G               &kp SLASH    &kp SEMICOLON  &kp W                &kp K              &kp MINUS        &kp X
-                                  &lt 3 ESCAPE      &lt 4 E             &lt 5 TAB    &kp ENTER      &lt 2 SPACE
+  &lt 1 COMMA     &kp PERIOD      &kp J             &lt 3 G               &kp SLASH    &kp SEMICOLON  &kp W                &kp K              &kp MINUS        &kp X
+                                  &lt 4 ESCAPE      &kp E             &lt 5 TAB    &kp BACKSPACE      &lt 2 SPACE
             >;
         };
 
@@ -95,7 +95,7 @@
 
         SYM {
             bindings = <
-  &kp AMPERSAND     &kp AT_SIGN       &kp HASH         &kp TILDE             &kp LCTRL    &kp DOLLAR    &kp NON_US_BACKSLASH   &kp MINUS     &kp SLASH          &kp PERCENT
+  &kp AMPERSAND     &kp AT_SIGN       &kp PERCENT         &kp TILDE             &kp LCTRL    &kp DOLLAR    &kp BACKSLASH   &kp MINUS     &kp SLASH          &kp HASH
   &kp LEFT_BRACKET  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp EQUAL    &kp ASTERISK  &kp RIGHT_PARENTHESIS  &kp PLUS      &kp RIGHT_BRACKET  &kp EXCLAMATION
   &kp LESS_THAN     &kp GREATER_THAN  &kp QUESTION     &kp COLON             &kp GRAVE    &kp SQT       &kp LEFT               &kp UP_ARROW  &kp DOWN           &kp RIGHT
                                       &trans           &trans                &trans       &kp BACKSPACE        &mt RIGHT_SHIFT ENTER
