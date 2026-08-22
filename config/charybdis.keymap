@@ -38,12 +38,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <35 19>;
-        };
-
-        scroll {
-            bindings = <&mo 5>;
-            key-positions = <20 21>;
+            key-positions = <26 27>;
         };
     };
 
@@ -66,7 +61,7 @@
             bindings =  <
   &kp Q           &kp P           &kp Y             &kp C               &kp B        &kp V          &kp M                &kp U              &kp Z            &kp L
   &mt LEFT_WIN A  &mt LEFT_ALT N  &mt LEFT_SHIFT I  &mt LEFT_CONTROL S  &kp F        &kp D          &mt RIGHT_CONTROL T  &mt RIGHT_SHIFT H  &mt RIGHT_ALT O  &mt RIGHT_WIN R
-  &lt 1 COMMA     &kp PERIOD      &kp J             &kp G               &lt 3 SLASH    &lt 3 SEMICOLON  &kp W                &kp K              &kp MINUS        &kp X
+  &lt 1 COMMA     &lt 6 PERIOD      &kp J             &kp G               &lt 3 SLASH    &lt 3 SEMICOLON  &kp W                &kp K              &kp MINUS        &kp X
                                   &lt 4 ESCAPE      &kp E             &lt 5 TAB    &kp BACKSPACE      &lt 2 SPACE
             >;
         };
