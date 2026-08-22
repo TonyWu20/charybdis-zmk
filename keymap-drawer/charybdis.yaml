@@ -21,7 +21,7 @@ layers:
   - {t: H, h: RIGHT SHIFT}
   - {t: O, h: RIGHT ALT}
   - {t: R, h: RIGHT WIN}
-  - {t: ',', h: SCROLL}
+  - {t: ',', h: NAV}
   - .
   - J
   - G
@@ -31,9 +31,9 @@ layers:
   - K
   - '-'
   - X
-  - {t: ESCAPE, h: SYM}
-  - {t: E, h: FUN}
-  - {t: '$$mdi:keyboard-tab$$', h: NAV}
+  - {t: ESCAPE, h: FUN}
+  - {t: E, h: SYM}
+  - {t: '$$mdi:keyboard-tab$$', h: SCROLL}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
   NAV:
@@ -57,21 +57,21 @@ layers:
   - $$mdi:arrow-down-bold$$
   - UP ARROW
   - $$mdi:arrow-right-bold$$
-  - '&mkp LCLK'
+  - {t: '&mkp LCLK', type: held}
   - '&mkp RCLK'
   - '&mkp MB3'
-  - {t: Ctl+V, h: Ctl+Sft+V}
+  - {t: Ctl+V, h: (LC(LS(V)))}
   - Ctl+Y
   - {t: ▽, type: trans}
   - Ctl+Sft+$$mdi:arrow-left-bold$$
   - Sft+Ctl+$$mdi:arrow-right-bold$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
+  - '&mkp MB3'
+  - '&mkp MB1'
+  - '&mkp MB2'
   - {t: '$$mdi:backspace$$', h: FUN}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   NUM:
   - '1'
   - '2'
@@ -87,7 +87,7 @@ layers:
   - DOWN ARROW
   - UP ARROW
   - $$mdi:arrow-right-bold$$
-  - '&quicker'
+  - LEFT CONTROL
   - ''
   - KP 4
   - KP 5
@@ -129,7 +129,7 @@ layers:
   - VOLUME DOWN
   - VOLUME UP
   - BT CLR
-  - {t: ▽, type: trans}
+  - '&bootloader'
   - F1
   - F2
   - F3
@@ -138,9 +138,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&bootloader'
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -171,15 +171,15 @@ layers:
   - ':'
   - '`'
   - ''''
-  - HOME
-  - END
-  - {t: ▽, type: trans}
+  - $$mdi:arrow-left-bold$$
+  - UP ARROW
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:keyboard-return$$', h: RIGHT SHIFT}
   SCROLL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -201,19 +201,19 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   MSNIPE:
@@ -257,5 +257,5 @@ combos:
   k: '&mkp LCLK'
 - p: [17, 18]
   k: '&mkp RCLK'
-- p: [16, 17, 18]
-  k: SCROLL
+- p: [20, 21]
+  k: NAV
