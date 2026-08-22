@@ -22,7 +22,7 @@ layers:
   - {t: O, h: RIGHT ALT}
   - {t: R, h: RIGHT WIN}
   - {t: ',', h: NAV}
-  - .
+  - {t: ., h: MSNIPE}
   - J
   - G
   - {t: /, h: FUN}
@@ -238,7 +238,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -257,7 +257,5 @@ combos:
   k: '&mkp LCLK'
 - p: [17, 18]
   k: '&mkp RCLK'
-- p: [35, 19]
+- p: [26, 27]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
-- p: [20, 21]
-  k: SCROLL
