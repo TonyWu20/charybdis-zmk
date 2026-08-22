@@ -24,17 +24,17 @@ layers:
   - {t: ',', h: NAV}
   - .
   - J
-  - G
+  - {t: G, h: FUN}
   - /
   - ;
   - W
   - K
   - '-'
   - X
-  - {t: ESCAPE, h: FUN}
-  - {t: E, h: SYM}
+  - {t: ESCAPE, h: SYM}
+  - E
   - {t: '$$mdi:keyboard-tab$$', h: SCROLL}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
   NAV:
   - Alt+F4
@@ -132,14 +132,14 @@ layers:
   - '&bootloader'
   - F1
   - F2
-  - F3
+  - {t: F3, type: held}
   - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&bootloader'
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -147,14 +147,14 @@ layers:
   SYM:
   - '&'
   - '@'
-  - '#'
+  - '%'
   - '~'
   - $$mdi:apple-keyboard-control$$
   - $
   - \
   - '-'
   - /
-  - '%'
+  - '#'
   - '['
   - '{'
   - '}'
@@ -175,8 +175,8 @@ layers:
   - UP ARROW
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: RIGHT SHIFT}
@@ -257,5 +257,5 @@ combos:
   k: '&mkp LCLK'
 - p: [17, 18]
   k: '&mkp RCLK'
-- p: [20, 21]
-  k: NAV
+- p: [16, 17, 18, 19]
+  k: enter
