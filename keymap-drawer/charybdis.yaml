@@ -257,5 +257,7 @@ combos:
   k: '&mkp LCLK'
 - p: [17, 18]
   k: '&mkp RCLK'
-- p: [16, 17, 18, 19]
+- p: [35, 19]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
+- p: [20, 21]
+  k: SCROLL
