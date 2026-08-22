@@ -38,7 +38,12 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <16 17 18 19>;
+            key-positions = <35 19>;
+        };
+
+        scroll {
+            bindings = <&mo 5>;
+            key-positions = <20 21>;
         };
     };
 
