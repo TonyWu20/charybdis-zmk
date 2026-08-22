@@ -258,4 +258,4 @@ combos:
 - p: [17, 18]
   k: '&mkp RCLK'
 - p: [16, 17, 18, 19]
-  k: enter
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
