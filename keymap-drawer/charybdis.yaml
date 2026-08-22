@@ -24,9 +24,9 @@ layers:
   - {t: ',', h: NAV}
   - .
   - J
-  - {t: G, h: FUN}
-  - /
-  - ;
+  - G
+  - {t: /, h: FUN}
+  - {t: ;, h: FUN}
   - W
   - K
   - '-'
@@ -132,8 +132,8 @@ layers:
   - '&bootloader'
   - F1
   - F2
-  - {t: F3, type: held}
-  - F12
+  - F3
+  - {t: F12, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
