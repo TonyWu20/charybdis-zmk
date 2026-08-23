@@ -6,16 +6,16 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &lt {
-    tapping-term-ms = <240>;
-    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
     quick-tap-ms = <150>;
     require-prior-idle-ms = <10>;
 };
 
 &mt {
-    tapping-term-ms = <250>;
-    flavor = "tap-preferred";
-    require-prior-idle-ms = <250>;
+    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
+    require-prior-idle-ms = <200>;
 };
 
 / {
