@@ -1,16 +1,14 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/petejohanson
-    - name: inorichi
-      url-base: https://github.com/inorichi
+    - name: TonyWu20
+      url-base: https://github.com/TonyWu20
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: feat/pointers-move-scroll
+      remote: TonyWu20
+      revision: feat/pointers-move-scroll-smooth
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: inorichi
-      revision: main
+      remote: TonyWu20
+      revision: smooth-scroll
   self:
     path: config
