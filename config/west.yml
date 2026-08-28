@@ -5,10 +5,10 @@ manifest:
   projects:
     - name: zmk
       remote: TonyWu20
-      revision: feat/pointers-move-scroll-smooth
+      revision: 28c8a6cf892914ff1f0a15c1c9c5336c91d29b48
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: TonyWu20
-      revision: smooth-scroll
+      revision: f7b7e23367d302cec3c9ce673cae4cb29ec158b6
   self:
     path: config
