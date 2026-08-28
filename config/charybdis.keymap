@@ -97,7 +97,7 @@
             bindings = <
   &kp AMPERSAND     &kp AT_SIGN       &kp PERCENT      &kp TILDE          &kp CARET    &kp DOLLAR    &kp BACKSLASH   &kp MINUS     &kp SLASH          &kp HASH
   &kp LEFT_BRACKET  &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp EQUAL    &kp ASTERISK  &kp RIGHT_PARENTHESIS  &kp PLUS      &kp RIGHT_BRACKET  &kp EXCLAMATION
-  &kp LESS_THAN     &kp GREATER_THAN  &kp QUESTION     &kp COLON             &kp GRAVE    &kp SQT       &kp LEFT               &kp UP_ARROW  &kp DOWN           &kp RIGHT
+  &kp LESS_THAN     &kp GREATER_THAN  &kp QUESTION     &kp COLON             &kp GRAVE    &kp SQT       &kp LEFT               &kp DOWN  &kp UP           &kp RIGHT
                                       &trans           &trans                &trans       &kp BACKSPACE        &mt RIGHT_SHIFT ENTER
             >;
         };
