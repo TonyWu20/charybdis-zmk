@@ -172,8 +172,8 @@ layers:
   - '`'
   - ''''
   - $$mdi:arrow-left-bold$$
-  - UP ARROW
   - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   - {type: held}
   - {t: ▽, type: trans}
