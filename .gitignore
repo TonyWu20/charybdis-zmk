@@ -1,0 +1,10 @@
+# West workspace artifacts from local builds
+.west/
+zmk/
+modules/
+build/
+zephyr/*
+!zephyr/module.yml
+
+.DS_Store
+zmk-pmw3610-driver/

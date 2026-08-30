@@ -1,3 +1,5 @@
+#include <dt-bindings/zmk/keys.h>
+
 #define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, MS) \
   combo_##NAME { \
     bindings = <BINDINGS>; \
@@ -14,11 +16,13 @@
 combos {
   compatible = "zmk,combos";
 
-  COMBO(l_leftclick, &mkp LCLK, 11 12, BASE, COMBO_TERM_SLOW)
+  /* HRM-mod combo: quick tap fires the click; holding N+I yields the LALT+LSHFT chord. */
+  COMBO(l_leftclick, &hrc_n_i LS(LALT) LCLK, 11 12, BASE, COMBO_TERM_SLOW)
   COMBO(l_rightclick, &mkp RCLK, 21 22, BASE, COMBO_TERM_SLOW)
   COMBO(l_middleclick, &mkp MCLK, 22 23, BASE, COMBO_TERM_SLOW)
 
-  COMBO(r_leftclick, &mkp LCLK, 17 18, BASE, COMBO_TERM_SLOW)
+  /* HRM-mod combo: quick tap fires the click; holding H+O yields the RSHFT+RALT chord. */
+  COMBO(r_leftclick, &hrc_h_o RS(RALT) LCLK, 17 18, BASE, COMBO_TERM_SLOW)
   COMBO(r_rightclick, &mkp RCLK, 27 28, BASE, COMBO_TERM_SLOW)
   COMBO(r_middleclick, &mkp MCLK, 26 27, BASE, COMBO_TERM_SLOW)
 }; 
