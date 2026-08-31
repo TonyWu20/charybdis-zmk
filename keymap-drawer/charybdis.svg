@@ -1,5 +1,11 @@
 <svg width="788" height="2361" viewBox="0 0 788 2361" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
+<svg id="mdi:apple-keyboard-control">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-control" viewBox="0 0 24 24"><path d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-option">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-option" viewBox="0 0 24 24"><path d="M3,4H9.11L16.15,18H21V20H14.88L7.84,6H3V4M14,4H21V6H14V4Z" /></svg>
+</svg>
 <svg id="mdi:arrow-down-bold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-down-bold" viewBox="0 0 24 24"><path d="M9,4H15V12H19.84L12,19.84L4.16,12H9V4Z" /></svg>
 </svg>
@@ -307,12 +313,14 @@ path.combo {
 <text x="560" y="88" class="combo tap">
 <tspan x="560" dy="-0.6em">&amp;mkp</tspan><tspan x="560" dy="1.2em">LCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="554" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-control"/>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="602" y="74" width="28" height="26" class="combo"/>
 <text x="616" y="88" class="combo tap">
 <tspan x="616" dy="-0.6em">&amp;mkp</tspan><tspan x="616" dy="1.2em">RCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="610" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-option"/>
 </g>
 <g class="combo enter combopos-2">
 <rect rx="6" ry="6" x="546" y="130" width="28" height="26" class="combo enter"/>
@@ -489,12 +497,14 @@ path.combo {
 <text x="560" y="88" class="combo tap">
 <tspan x="560" dy="-0.6em">&amp;mkp</tspan><tspan x="560" dy="1.2em">LCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="554" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-control"/>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="602" y="74" width="28" height="26" class="combo"/>
 <text x="616" y="88" class="combo tap">
 <tspan x="616" dy="-0.6em">&amp;mkp</tspan><tspan x="616" dy="1.2em">RCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="610" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-option"/>
 </g>
 <g class="combo enter combopos-2">
 <rect rx="6" ry="6" x="546" y="130" width="28" height="26" class="combo enter"/>
@@ -672,12 +682,14 @@ path.combo {
 <text x="560" y="88" class="combo tap">
 <tspan x="560" dy="-0.6em">&amp;mkp</tspan><tspan x="560" dy="1.2em">LCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="554" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-control"/>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="602" y="74" width="28" height="26" class="combo"/>
 <text x="616" y="88" class="combo tap">
 <tspan x="616" dy="-0.6em">&amp;mkp</tspan><tspan x="616" dy="1.2em">RCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="610" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-option"/>
 </g>
 <g class="combo enter combopos-2">
 <rect rx="6" ry="6" x="546" y="130" width="28" height="26" class="combo enter"/>
@@ -848,12 +860,14 @@ path.combo {
 <text x="560" y="88" class="combo tap">
 <tspan x="560" dy="-0.6em">&amp;mkp</tspan><tspan x="560" dy="1.2em">LCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="554" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-control"/>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="602" y="74" width="28" height="26" class="combo"/>
 <text x="616" y="88" class="combo tap">
 <tspan x="616" dy="-0.6em">&amp;mkp</tspan><tspan x="616" dy="1.2em">RCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="610" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-option"/>
 </g>
 <g class="combo enter combopos-2">
 <rect rx="6" ry="6" x="546" y="130" width="28" height="26" class="combo enter"/>
@@ -1009,12 +1023,14 @@ path.combo {
 <text x="560" y="88" class="combo tap">
 <tspan x="560" dy="-0.6em">&amp;mkp</tspan><tspan x="560" dy="1.2em">LCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="554" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-control"/>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="602" y="74" width="28" height="26" class="combo"/>
 <text x="616" y="88" class="combo tap">
 <tspan x="616" dy="-0.6em">&amp;mkp</tspan><tspan x="616" dy="1.2em">RCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="610" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-option"/>
 </g>
 <g class="combo enter combopos-2">
 <rect rx="6" ry="6" x="546" y="130" width="28" height="26" class="combo enter"/>
@@ -1169,12 +1185,14 @@ path.combo {
 <text x="560" y="88" class="combo tap">
 <tspan x="560" dy="-0.6em">&amp;mkp</tspan><tspan x="560" dy="1.2em">LCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="554" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-control"/>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="602" y="74" width="28" height="26" class="combo"/>
 <text x="616" y="88" class="combo tap">
 <tspan x="616" dy="-0.6em">&amp;mkp</tspan><tspan x="616" dy="1.2em">RCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="610" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-option"/>
 </g>
 <g class="combo enter combopos-2">
 <rect rx="6" ry="6" x="546" y="130" width="28" height="26" class="combo enter"/>
@@ -1335,12 +1353,14 @@ path.combo {
 <text x="560" y="88" class="combo tap">
 <tspan x="560" dy="-0.6em">&amp;mkp</tspan><tspan x="560" dy="1.2em">LCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="554" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-control"/>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="602" y="74" width="28" height="26" class="combo"/>
 <text x="616" y="88" class="combo tap">
 <tspan x="616" dy="-0.6em">&amp;mkp</tspan><tspan x="616" dy="1.2em">RCLK</tspan>
 </text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="610" y="86" height="12" width="12.0" class="combo hold glyph mdi:apple-keyboard-option"/>
 </g>
 <g class="combo enter combopos-2">
 <rect rx="6" ry="6" x="546" y="130" width="28" height="26" class="combo enter"/>

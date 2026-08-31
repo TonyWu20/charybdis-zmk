@@ -254,8 +254,8 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [16, 17]
-  k: '&mkp LCLK'
+  k: {t: '&mkp LCLK', h: 'Sft+$$mdi:apple-keyboard-control$$'}
 - p: [17, 18]
-  k: '&mkp RCLK'
+  k: {t: '&mkp RCLK', h: 'Sft+$$mdi:apple-keyboard-option$$'}
 - p: [26, 27]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
