@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: TonyWu20
-      revision: 6cffa80437685abfb517436d33328c862d349c6a
+      revision: b08f2c7b027d32daa3509131d4a3961ff4a1d65e
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: TonyWu20

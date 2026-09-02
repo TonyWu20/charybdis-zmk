@@ -155,9 +155,10 @@ resync changes live in that checkout as commit `6cffa804`:
 
 To make the config build pick them up:
 
-1. Push the commit: `git -C zmk push TonyWu20 6cffa80437685abfb517436d33328c862d349c6a:refs/heads/feat/pointers-move-scroll-smooth`
-2. In `config/west.yml`, set the `zmk` revision to
-   `6cffa80437685abfb517436d33328c862d349c6a` (or the branch name `feat/pointers-move-scroll-smooth` to track it).
+1. Push the commits: `git -C zmk push git@github.com:TonyWu20/zmk HEAD:refs/heads/feat/pointers-move-scroll-smooth`
+2. In `config/west.yml`, set the `zmk` revision to the commit SHA
+   (currently `b08f2c7b027d32daa3509131d4a3961ff4a1d65e`, which also
+   contains the resync crash fix below).
 3. Run `west update` from the repo root.
 
 Until the pin is bumped, a fresh `west update` resets the fork to
@@ -166,6 +167,19 @@ Until the pin is bumped, a fresh `west update` resets the fork to
 (Kconfig ignores unknown symbols).
 The kscan debounce (Layer 1) works with the pinned fork as-is, since
 `debounce-press-ms` / `debounce-release-ms` already exist in it.
+
+## Bug found in the first field test: resync GATT read crash
+
+The first build of Layer 3 crashed the right half within seconds of
+the split link coming up. The host connection died and the keyboard
+stuck on connecting. Cause: `split_central_resync_work` passed a
+stack-local `struct bt_gatt_read_params` to `bt_gatt_read`. Zephyr
+stores a pointer to that struct in the pending ATT request and
+dereferences it in the response callback, which runs later in the
+Bluetooth work queue. The stack frame was gone by then. The dangling
+`func` pointer crashed the central. The fix (commit `b08f2c7b` on the
+fork branch) stores one read params struct per peripheral slot, the
+same pattern as the battery level fetch in the same file.
 
 ## Residual risks
 
