@@ -8,3 +8,5 @@ zephyr/*
 
 .DS_Store
 zmk-pmw3610-driver/
+
+.zmk/

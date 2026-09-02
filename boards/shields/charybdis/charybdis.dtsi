@@ -40,6 +40,14 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
 
+        /* Switch chatter protection: aged mechanical switches bounce.
+         * A key press only latches after 10 ms of continuous closure,
+         * and a release only after 15 ms of continuous opening, so a
+         * chatter burst shorter than that does not register as an extra
+         * key stroke. Raise these values if double presses persist. */
+        debounce-press-ms = <10>;
+        debounce-release-ms = <15>;
+
         diode-direction = "row2col";
 		row-gpios
 			= <&pro_micro 18 GPIO_ACTIVE_HIGH>
