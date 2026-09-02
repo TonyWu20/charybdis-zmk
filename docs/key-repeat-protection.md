@@ -144,19 +144,26 @@ passes the keymap explicitly.
 
 ## Applying the ZMK fork changes
 
-The `zmk/` checkout is the TonyWu20 fork pinned at `b5ae616e`
-(`config/west.yml`). The guard and resync changes live in that checkout:
+The `zmk/` checkout is the TonyWu20 fork. The pin `b5ae616e` is the tip
+of the fork branch `feat/pointers-move-scroll-smooth`. The guard and
+resync changes live in that checkout as commit `6cffa804`:
 
 - `zmk/app/Kconfig` — `ZMK_KEY_EVENT_GUARD`, `ZMK_KEY_EVENT_GUARD_MIN_INTERVAL_MS`
 - `zmk/app/src/keymap.c` — the guard
 - `zmk/app/src/split/bluetooth/Kconfig` — `ZMK_SPLIT_BLE_POS_RESYNC_MS`
 - `zmk/app/src/split/bluetooth/central.c` — the resync
 
-Commit these to the fork (or port to upstream ZMK), push, then bump the
-revision in `config/west.yml` and `west update`. Until the pin is bumped,
-a fresh `west update` resets the fork to `b5ae616e` and the two
-`CONFIG_ZMK_KEY_EVENT_GUARD` / `CONFIG_ZMK_SPLIT_BLE_POS_RESYNC_MS`
-lines in the right conf are inert (Kconfig ignores unknown symbols).
+To make the config build pick them up:
+
+1. Push the commit: `git -C zmk push TonyWu20 6cffa80437685abfb517436d33328c862d349c6a:refs/heads/feat/pointers-move-scroll-smooth`
+2. In `config/west.yml`, set the `zmk` revision to
+   `6cffa80437685abfb517436d33328c862d349c6a` (or the branch name `feat/pointers-move-scroll-smooth` to track it).
+3. Run `west update` from the repo root.
+
+Until the pin is bumped, a fresh `west update` resets the fork to
+`b5ae616e` and the two `CONFIG_ZMK_KEY_EVENT_GUARD` /
+`CONFIG_ZMK_SPLIT_BLE_POS_RESYNC_MS` lines in the right conf are inert
+(Kconfig ignores unknown symbols).
 The kscan debounce (Layer 1) works with the pinned fork as-is, since
 `debounce-press-ms` / `debounce-release-ms` already exist in it.
 
